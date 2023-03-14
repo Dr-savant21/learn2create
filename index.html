@@ -14,7 +14,6 @@
 </head>
 
 <body>
-    <div class="container"></div>
     <!-- section 1  -->
     <section class="header-section" id="header-section">
         <!-- Navbar -->
@@ -22,16 +21,19 @@
         <nav class="navbar">
             <div class="navbrand"> 
                 <a href="">Savant<span>World</span></a>
+                <div class="toggler">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
             </div>
             <div class="nav-text">
                 <ul class="nav-text-link">
-                    <li class="nav-item"><a href="" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="#sect" class="nav-link">About Us</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Services</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Contact</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Login</a></li>
+                    <li class="nav-item"><a href="#header-section" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About Us</a></li>
+                    <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="#login" class="nav-link">Login</a></li>
                 </ul>
-            </div>
+            </div> 
         </nav>
         <!-- </div> -->
         <div class="container">
@@ -49,12 +51,11 @@
         </div>
     </section>
     <!-- About section  -->
-    <section class="section-about" id="sect">
-        <!-- <div class="img">
-            <img src="./image/developers.jpg" alt="a tutor teaching programming"> 
-        </div> -->
-        <!-- -->
+    <section class="section-about" id="about">
         <div class="content">
+            <div class="img">
+                <img src="./image/developers.jpg" alt="">
+            </div>
             <div class="text-wrapper">
                 <h1>About us</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium minima, tempora necessitatibus
@@ -70,7 +71,7 @@
         </div>
     </section>
     <!-- services section  -->
-    <section class="section-services">
+    <section class="section-services" id="services">
         <div class="innerSection">
             <h1>OUR SERVICES</h1>
             <hr>
@@ -120,9 +121,50 @@
             </div>
         </div>
     </section>
+    <!-- contact services -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="left">
+                <div class="address details">
+                    <h4>Address</h4>
+                    <address>Siluko road, Benin city</address>
+                    <address>Edo state, Nigeria</address>
+                </div>
+                <div class="phone details">
+                    <h4>Phone</h4>
+                    <p>0806542637</p>
+                    <p>08167233456</p>
+                </div>
+                <div class="email details">
+                    <h4>Email</h4>
+                    <p>admin@gmail.com</p>
+                    <p>support@gmail.com</p>
+                </div>
+            </div>
+            <div class="right">
+                <h2>Send us a message</h2>
+                <p>If you have any queries you can contact us from here:</p>
+                <form action="" method="post">
+                    <input type="text" name="fullname" id="fullname" placeholder="Enter your Name">
+                    <input type="email" name="email" id="email" placeholder="Enter your Email">
+                    <textarea name="" id="" cols="30" rows="10">
+                        Enter your Message
+                    </textarea>
+                    <button>Send now</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Login Popup -->
+    <section id="login" class="loginsection">
 
+        <form class="login">
+            <input type="text" placeholder="enter username"> <br>
+            <input type="password" placeholder="enter password"> <br>
+            <button type="submit">Login</button>
+        </form>
 
-
+    </section>
     <script src="./js/script.js"></script>
 </body>
 

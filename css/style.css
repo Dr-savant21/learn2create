@@ -4,11 +4,10 @@ body{
     box-sizing: border-box;
     scroll-behavior: smooth;
     font-family: sans-serif;
-    position: absolute;
 }
 /* header section */
 .header-section {
-    background: linear-gradient(#000a, #000a), url(../image/index.png);
+    background: url(../image/newImage2.png);
     background-position: center;
     background-size: cover;
     width: 100%;
@@ -28,12 +27,16 @@ body{
     width: 100%;
 }
 .navbrand {
-    font-size: 25px;
+    font-size: 30px;
     font-weight: bold;
-    cursor: wait;
+    cursor: pointer;
 }
 .navbrand span {
     color: red;
+}
+.navbrand .toggler {
+    display: none;
+    cursor: pointer;
 }
 .navbar a{
     color: white;
@@ -50,6 +53,7 @@ body{
     margin-right: 20px;
     list-style-type: none;
     justify-items: center;
+    height: auto;
 }
 .nav-item {
     font-size: 18px;
@@ -58,10 +62,10 @@ body{
     position: relative;
     top: 5px;
 }
-.nav-link {
+ul li.nav-link{
     transition: 1s ease-in-out;
 }
-.nav-link::after{
+ul li .nav-link::after{
     content: '';
     height: 3px;
     width: 0;
@@ -71,12 +75,15 @@ body{
     left: 0;
     transition: 1s ease-in-out;
 }
-.nav-link:hover {
+ul li .nav-link:hover {
     color: red;
 }
-.nav-link:hover::after {
+ul li .nav-link:hover::after {
     width: 100%;
     color: red;
+}
+.nav-text .show-links {
+    height: 12rem;
 }
 .header-section .container{
     position: absolute;
@@ -89,8 +96,8 @@ body{
     color: #fff;
 }
 .home-text h1{
-    font-size: 60px;
-    margin-top: 120px;
+    font-size: 70px;
+    margin-top: 170px;
     margin-bottom: 0px;
 }
 .home-text h1:hover{
@@ -151,7 +158,6 @@ body{
     background-color: #888;
     display: flex;
     flex-direction: row-reverse;
-    position: relative;
     padding: 50px 0; 
 }
 .section-about .content {
@@ -160,6 +166,9 @@ body{
     width: 30%;
     height: 90vh;
     float: right;
+}
+.section-about .content .img{
+    display: none;
 }
 .section-about .content p{
     line-height: 2.5;
@@ -232,4 +241,249 @@ body{
 .section-services .innerSection .container .wrapper .icon:hover {
     background-color: white;
     color: red;
+}
+/* contact section*/
+.contact{
+    width: 100%;
+    height: 100vh;
+    background-color: pink;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact .container{
+    margin: auto;
+    background-color: white;
+    width: 85%;
+    background: white;
+    padding: 20px 60px 30px 40px;
+    border-radius: 15px;
+    box-shadow: 5px 10px 20px #f008;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.contact .container .left{
+    width: 25%;
+    height: 100%;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.contact .container .left h4{
+    margin: 0;
+    text-align: center;
+}
+.contact .container .left .details{
+    margin: 14px;
+    text-align: left;
+}
+.contact .container .left p{
+    margin: 0;
+    text-align: left;
+}
+.contact .container .left address{
+    font-style: normal;
+}
+.contact .container .left::after{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 70%;
+    top: 50%;
+    right: -15px;
+    transform: translateY(-50%);
+    background: #000;
+}
+.contact .container .right{
+    width: 75%;
+    margin-left: 75px;
+}
+.contact .container .right h2{
+    color: red;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+.contact .container .right p{
+    font-size: 15px;
+    margin-top: 0;
+}
+.contact .container .right input{
+    width: 100%;
+    height: 50px;
+    margin: 12px 0;
+    border: none;
+    font-size: 16px;
+    background: #f002;
+    border-radius: 10px;
+    padding: 0 16px;
+    resize: none;
+}
+input:focus-visible{
+    outline: none;
+}
+textarea:focus-visible{
+    outline: none;
+}
+.contact .container .right textarea{
+    width: 100%;
+    min-height: 50px;
+    margin: 12px 0;
+    border: none;
+    font-size: 16px;
+    background: #f002;
+    border-radius: 10px;
+    padding: 0 16px;
+    resize: none;
+    color: #8B7575;
+    text-align: left;
+}
+.contact .container .right button{
+    background: red;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+}
+/* login popup section */
+.loginsection {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #000a;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    place-items: center;
+}
+.loginsection:target {
+    display: grid;
+}
+.login {
+    width: 30%;
+    padding: 100px 50px;
+    background: linear-gradient(40deg, pink, red);
+    border-radius: 30px;
+    display: grid;
+    transition: all 2s ease-in-out;
+}
+.login input {
+    height: 40px;
+    width: 100%;
+    border: none;
+    outline: none;
+    margin: 10px 0;
+    border-radius: 20px;
+    padding: 5px 10px
+}
+.login button {
+    padding: 10px 20px;
+    margin: auto;
+    font-size: 24px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+@media (max-width:905px){
+    .header-section .container{
+        position: absolute;
+        left: 20%;
+    }
+    .section-about {
+        background: none;
+        display: block;
+        position: relative;
+        padding: 20px 0; 
+        height: 100vh;
+        background-color: #888;
+    }
+    .section-about .content {
+        background-color: transparent;
+        padding: 0;
+        width: 100%;
+    }
+    .section-about .content .img{
+        display: block;
+        width: 80%;
+        margin: auto;
+    }
+    .section-about .content .img img{
+        width: 100%;
+        object-fit: cover;
+        border-radius: 16px;
+    }
+    .section-about .content p{
+        line-height: 1.5;
+    }
+    .section-about .content .text-wrapper{
+        text-align: center;
+    }
+    .section-about .content .text-wrapper .about{
+        align-items: center;
+        justify-content: center;
+    }
+}
+@media (max-width:760px){
+    .navbar {
+        display: block;
+        padding-top: 1rem;
+    }
+    .navbrand{
+        display: flex;
+        justify-content: space-between;
+    }
+    .navbrand .toggler {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        right: 80px;
+    }
+    .nav-text-link{
+        height: 0;
+        display: block;
+        overflow: hidden;
+        width: 15%;
+    }
+    .nav-item {
+        padding: 0.3rem 0;
+    }
+    .header-section .container{
+        position: absolute;
+        left: 10%;
+    }
+}
+@media (max-width:605px){
+    .header-section .container{
+        position: absolute;
+        left: 5%;
+    }
+    .home-text h1{
+        font-size: 65px;
+    }
+    .home-btn .btn {
+        width: 150px;
+        /* padding: 15px 0px; */
+        margin: 0 10px;
+    }
+    .contact .container{
+        margin: auto;
+        width: 90%;
+        background: white;
+        padding: 20px 60px 30px 40px;
+    }
+    .contact .container .left::after{
+        content: '';
+        position: absolute; 
+        top: 50%;
+        right: -40px;
+    }
 }

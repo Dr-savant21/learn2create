@@ -10,7 +10,7 @@ function changeBg(){
     headerSection.style.backgroundSize = 'cover'
 }
 function newBg(){
-    headerSection.style.background = "linear-gradient(#000a,#000a), url('../image/newImage2.png')"
+    headerSection.style.background = "linear-gradient(#000a,#000a), url('../image/index.png')"
     headerSection.style.backgroundPosition = 'center';
     headerSection.style.backgroundSize = 'cover'
 }
@@ -22,4 +22,10 @@ function designerName(){
     }
 }
 setInterval(designerName,1000)
+const toggle = document.querySelector('.toggler');
+const links = document.querySelector('ul');
+
+toggle.addEventListener('click', ()=>{
+    links.classList.toggle('show-links');
+})
 // github/tonerozic1
